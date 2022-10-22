@@ -1,24 +1,29 @@
-# Election_Analysis
+# Overview of Election Audit: 
 
-## Project Overview
+The Colorado Board of Elections has tasked you with counting votes, providing county turnout and determining the winning candidate. In the results, you will find:
 
-Colorado Board of Elections has votes to process. You've been tasked with determining the winner. 
+1. List of all counties
+2. Votes received per county 
+3. Percentage of voter turnout
+5. List all the candidates
+6. Votes received per candidate
+7. Percentage of winning candidate 
+8. Largest county turnout and winning candidate
 
-1. List all the candidates
-2. Provide the votes received per candidate
-3. Calculate the percentage of votes a candidate received 
-4. Determine the winner
+# Election-Audit Results: 
+
+![image](https://user-images.githubusercontent.com/114771735/197340934-c1bb5e46-174e-4e62-a551-187c6266dd12.png)
+
+# Election-Audit Summary:
+
+The vote counting script can be utilized for any election given the Data Source provides at minimum the following criteria: Ballot ID representing vote casted, County and Candidate. 
+
+To successfully run the script on any results file, we can modify the code to reference the corresponding column number for county and candidates. For instance, in the "election_results.csv" file, we have candidate names in the third column (referenced PyPoll_Challenge.py Line 50 as candidate_name = row [2]) and county name in the second column (referenced PyPoll_Challenge.py Line 53 as county_name = row [1]). If future data sources have these criterias in differing columns we would determine the new column and update our code accordingly. 
+
+If data sources have additional information linked to ballot ID, such as gender, race or political party affiliation, we can determine the voter count, percentage and majority of each demographic for that election by iterating the code with new variables. 
 
 ## Resources
-Data Source. election_results.csv
-Software: Python 3.6.1, Visual Studio Code, 1.38.1
+- Data Source. election_results.csv
+- Software: Python 3.6.1, Visual Studio Code, 1.38.1
 
-## Results 
 
-Charles Casper Stockham: 23.0% (85,213)
-Diana DeGette: 73.8% (272,892)
-Raymon Anthony Doane: 3.1% (11,606)
-
-Winner: Diana DeGette
-Winning Vote Count: 272,892
-Winning Percentage: 73.8%
